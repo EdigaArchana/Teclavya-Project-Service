@@ -1,0 +1,16 @@
+services:
+  mysql:
+    image: mysql:latest
+    environment:
+      - MYSQL_DATABASE=projects
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=pass
+      - TZ=Asia/Kolkata
+    ports:
+      - "3360:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+
+volumes:
+  mysql-data:
